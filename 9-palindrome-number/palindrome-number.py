@@ -4,7 +4,6 @@ class Solution(object):
         :type x: int
         :rtype: bool
         """
-        temp = x
         x = str(x)
         rev = x[-1:-len(x)-1:-1]
         if rev == x:
