@@ -1,8 +1,6 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         def find_pivot(nums, low, high):
-            low_2 = low
-            high_2 = high
             if len(nums) == 1:
                 return -1
             while low <= high:
@@ -12,10 +10,6 @@ class Solution:
                 if mid+1<len(nums):
                         if nums[mid+1] < nums[mid]:
                             return mid+1         
-                # if nums[mid-1] < nums[mid]:
-                #     low = mid + 1
-                # else:
-                #     high = mid - 1
                 if nums[mid]>nums[high]:
                     low = mid + 1
                 else:
